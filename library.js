@@ -3,7 +3,12 @@ var toTitleCase = function (text) {
     console.log(words);
     words = words.map(function (word) { return word.toUpperCase(); });
     console.log(words);
-    var newWords = words.forEach(function (word) { return word.slice(1).toLowerCase; });
+    var newWords = [];
+    for (var _i = 0, words_1 = words; _i < words_1.length; _i++) {
+        var word = words_1[_i];
+        var newWord = word[0] + word.slice(1).toLowerCase();
+        newWords.push(newWord);
+    }
     console.log(newWords);
 };
 toTitleCase("wojna I pokój");

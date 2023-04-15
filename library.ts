@@ -5,7 +5,11 @@ const toTitleCase = function(text: string){
     console.log(words)
     words = words.map(word => word.toUpperCase())
     console.log(words)
-    const newWords: string[] = words.forEach(word => word.slice(1).toLowerCase)
+    let newWords = []
+    for (const word of words){
+        const newWord = word[0] + word.slice(1).toLowerCase()
+        newWords.push(newWord)
+    }
     console.log(newWords)
 }
 
